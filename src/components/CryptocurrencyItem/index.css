@@ -1,0 +1,47 @@
+/* Write your CSS code here */
+.crypt-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-logo-cont {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+@media (min-width: 576px) {
+  .logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+  }
+  .name {
+    font-size: 16px;
+  }
+  .value-text {
+    font-size: 16px;
+    margin-left: 48px;
+    width: 72px;
+  }
+}
+.name {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.other-cont {
+  display: flex;
+  align-items: center;
+}
+.value-text {
+  text-align: right;
+  width: 52px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 8px;
+  color: #ffffff;
+}

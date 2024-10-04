@@ -33,9 +33,10 @@
   font-weight: 500;
   color: #ffffff;
 }
-.other-cont {
+.usd-euro-value-cont {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  width: auto;
 }
 .value-text {
   text-align: right;

@@ -27,6 +27,7 @@
   font-weight: 500;
   margin: 0px;
   color: #ffffff;
+  align-items: left;
 }
 .other-cont {
   display: flex;

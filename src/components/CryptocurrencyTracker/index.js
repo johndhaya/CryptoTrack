@@ -5,7 +5,7 @@ import Loader from 'react-loader-spinner'
 import CryptocurrenciesList from '../CryptocurrenciesList'
 import './index.css'
 
-const apiUrl = 'https://apis.ccbp.in/crypto-currency-converte'
+const apiUrl = 'https://apis.ccbp.in/crypto-currency-converter'
 
 class CryptocurrencyTracker extends Component {
   state = {
@@ -39,18 +39,20 @@ class CryptocurrencyTracker extends Component {
     return <CryptocurrenciesList cryptocurrenciesData={cryptocurrenciesData} />
   }
 
-  renderLoader = () => {
-    ;<div data-testid="loader">
-      <Loader type="Rings" color="#ffffff" height={80} width={80} />
-    </div>
-  }
+  // renderLoader = () => {}
 
   render() {
     const {isLoading} = this.state
 
     return (
       <div className="app-cont">
-        {isLoading ? this.renderLoader() : this.renderCryptocurrenciesList()}
+        {isLoading ? (
+          <div data-testid="loader">
+            <Loader type="Rings" color="#ffffff" height={80} width={80} />
+          </div>
+        ) : (
+          this.renderCryptocurrenciesList()
+        )}
       </div>
     )
   }

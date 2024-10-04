@@ -16,11 +16,12 @@ const CryptocurrencyItem = props => {
         <img className="logo" alt={currencyName} src={currencyLogoUrl} />
         <p className="name">{currencyName}</p>
       </div>
-      <div className="other-cont">
+      <div className="usd-euro-value-cont">
         <p className="value-text">{usdValue}</p>
         <p className="value-text">{euroValue}</p>
       </div>
     </li>
   )
 }
+
 export default CryptocurrencyItem

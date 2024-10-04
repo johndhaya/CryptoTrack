@@ -4,22 +4,18 @@ import CryptocurrencyItem from '../CryptocurrencyItem'
 import './index.css'
 
 class CryptocurrenciesList extends Component {
-  renderCryptocurrenciesHeader = () => {
-    ;<div className="list-head">
-      <p className="type-text">Coin Type</p>
-      <div className="other-cont">
-        <p className="value-text">USD</p>
-        <p className="value-text">EURO</p>
-      </div>
-    </div>
-  }
-
   renderCryptocurrenciesView = () => {
     const {cryptocurrenciesData} = this.props
 
     return (
       <div className="list-cont">
-        {this.renderCryptocurrenciesHeader()}
+        <div className="list-head">
+          <p className="type-text">Coin Type</p>
+          <div className="other-cont">
+            <p className="value-text">USD</p>
+            <p className="value-text">EURO</p>
+          </div>
+        </div>
         <ul className="crypto-list">
           {cryptocurrenciesData.map(each => (
             <CryptocurrencyItem key={each.id} cryptocurrencyDetails={each} />
